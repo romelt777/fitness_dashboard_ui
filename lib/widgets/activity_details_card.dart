@@ -21,7 +21,36 @@ class ActivityDetailsCard extends StatelessWidget {
         mainAxisSpacing: 12.0, // vertical spacing between rows
       ),
       itemBuilder: (context,index) => CustomCard(
-        child: Container(),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center, //vertical
+          crossAxisAlignment: CrossAxisAlignment.center, //horizontal
+          children: [
+            Image.asset(
+              healthDetails.healthData[index].icon,
+              width: 30,
+              height: 30,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top:15,bottom: 4),
+              child: Text(
+                healthDetails.healthData[index].value,
+                style: const TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+            Text(
+              healthDetails.healthData[index].title,
+              style: const TextStyle(
+                fontSize: 13,
+                color: Colors.grey,
+                fontWeight: FontWeight.normal,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
