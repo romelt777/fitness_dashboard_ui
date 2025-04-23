@@ -1,4 +1,3 @@
-import 'dart:io';
 
 import 'package:fitness_dashboard_ui/const/constant.dart';
 import 'package:fitness_dashboard_ui/data/line_chart_data.dart';
