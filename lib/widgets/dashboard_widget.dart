@@ -10,12 +10,13 @@ class DashboardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 18),
-        HeaderWidget(),
-        SizedBox(height: 18),
-        ActivityDetailsCard(),
-        SizedBox(height: 18),
-        LineChartCard(),
+        const SizedBox(height: 18),
+        const HeaderWidget(),
+        const SizedBox(height: 18),
+        const ActivityDetailsCard(),
+        const SizedBox(height: 18),
+        const LineChartCard(),
+        const SizedBox(height: 18),
       ],
     );
   }
