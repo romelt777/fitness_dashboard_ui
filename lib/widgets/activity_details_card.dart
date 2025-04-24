@@ -1,4 +1,5 @@
 import 'package:fitness_dashboard_ui/data/health_details_data.dart';
+import 'package:fitness_dashboard_ui/util/responsive.dart';
 import 'package:fitness_dashboard_ui/widgets/custom_card_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -16,8 +17,8 @@ class ActivityDetailsCard extends StatelessWidget {
       physics: const ScrollPhysics(),
       //grid with fixed number of columns
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 4, //4 items per row
-        crossAxisSpacing: 15, //horizontal space between columns
+        crossAxisCount: Responsive.isMobile(context) ? 2 : 4, // 2 or 4 items per row
+        crossAxisSpacing: Responsive.isMobile(context) ? 12 : 15, //horizontal space between columns
         mainAxisSpacing: 12.0, // vertical spacing between rows
       ),
       itemBuilder: (context,index) => CustomCard(
