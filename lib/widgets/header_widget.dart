@@ -10,12 +10,16 @@ class HeaderWidget extends StatefulWidget {
 }
 
 class _HeaderWidgetState extends State<HeaderWidget> {
+  bool _showMobileSearch = false;
+  final TextEditingController _searchController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         if (!Responsive.isDesktop(context))
+          //NON DESKTOP SIDE MENU
           Padding(
             padding: const EdgeInsets.only(right: 20),
             child: InkWell(
@@ -25,6 +29,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
             ),
           ),
         if (!Responsive.isMobile(context))
+          //NON MOBILE SEARCH
           Expanded(
             child: TextField(
               decoration: InputDecoration(
@@ -45,7 +50,46 @@ class _HeaderWidgetState extends State<HeaderWidget> {
         if (Responsive.isMobile(context))
           Row(
             children: [
-              IconButton(onPressed: () {}, icon: const Icon(Icons.search, color: Colors.grey, size: 25)),
+              AnimatedSwitcher(
+                duration: const Duration(milliseconds: 100),
+                child:
+                    _showMobileSearch
+                        ? SizedBox(
+                          key: const ValueKey(true),
+                          width: MediaQuery.of(context).size.width * 0.6,
+                          child: TextField(
+                            controller: _searchController,
+                            autofocus: true,
+                            decoration: InputDecoration(
+                              hintText: 'Search',
+                              filled: true,
+                              fillColor: cardBackgroundColor,
+                              prefixIcon: const Icon(Icons.search, size: 20),
+                              suffixIcon: IconButton(
+                                onPressed: () {
+                                  setState(() {
+                                    _showMobileSearch = false;
+                                    _searchController.clear();
+                                  });
+                                },
+                                icon: const Icon(Icons.close),
+                              ),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: BorderSide.none,
+                              ),
+                            ),
+                          ),
+                        )
+                        : IconButton(
+                          onPressed: () {
+                            setState(() {
+                              _showMobileSearch = true;
+                            });
+                          },
+                          icon: const Icon(Icons.search, color: Colors.grey, size: 25),
+                        ),
+              ),
               InkWell(
                 onTap: () => Scaffold.of(context).openEndDrawer(),
                 child: CircleAvatar(
