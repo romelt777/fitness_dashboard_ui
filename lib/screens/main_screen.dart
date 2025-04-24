@@ -13,15 +13,21 @@ class MainScreen extends StatelessWidget {
 
     return Scaffold(
       drawer: !isDesktop
-        ? const SizedBox(
+        ? SizedBox(
             width: 250,
-            child: SideMenuWidget(),
+            child: Container(
+              color: Colors.black,
+              child:SideMenuWidget(),
+            ),
           )
         : null,
       endDrawer: Responsive.isMobile(context)
         ? SizedBox(
           width: MediaQuery.of(context).size.width * 0.8,
-          child: const SummaryWidget(),
+          child: Container(
+            color: Colors.black,
+            child: SummaryWidget(),
+          )
         )
         : null,
       body: SafeArea(
