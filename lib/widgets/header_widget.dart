@@ -2,9 +2,14 @@ import 'package:fitness_dashboard_ui/const/constant.dart';
 import 'package:fitness_dashboard_ui/util/responsive.dart';
 import 'package:flutter/material.dart';
 
-class HeaderWidget extends StatelessWidget {
+class HeaderWidget extends StatefulWidget {
   const HeaderWidget({super.key});
 
+  @override
+  State<HeaderWidget> createState() => _HeaderWidgetState();
+}
+
+class _HeaderWidgetState extends State<HeaderWidget> {
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -40,22 +45,12 @@ class HeaderWidget extends StatelessWidget {
         if (Responsive.isMobile(context))
           Row(
             children: [
-              IconButton(
-                onPressed: () {}, 
-                icon: const Icon(
-                  Icons.search, 
-                  color: Colors.grey, 
-                  size: 25
-                )
-              ),
+              IconButton(onPressed: () {}, icon: const Icon(Icons.search, color: Colors.grey, size: 25)),
               InkWell(
                 onTap: () => Scaffold.of(context).openEndDrawer(),
                 child: CircleAvatar(
                   backgroundColor: Colors.transparent,
-                  child: Image.asset(
-                    "assets/images/luigi_avatar.png",
-                    width: 32,
-                  ),
+                  child: Image.asset("assets/images/luigi_avatar.png", width: 32),
                 ),
               ),
             ],
