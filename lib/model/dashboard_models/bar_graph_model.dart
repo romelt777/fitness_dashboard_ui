@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:fitness_dashboard_ui/model/graph_model.dart';
+import 'package:fitness_dashboard_ui/model/dashboard_models/graph_model.dart';
 
 class BarGraphModel {
   final String label;

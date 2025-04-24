@@ -1,9 +1,9 @@
 import 'package:fitness_dashboard_ui/util/responsive.dart';
-import 'package:fitness_dashboard_ui/widgets/activity_details_card.dart';
-import 'package:fitness_dashboard_ui/widgets/bar_graph_widget.dart';
-import 'package:fitness_dashboard_ui/widgets/header_widget.dart';
-import 'package:fitness_dashboard_ui/widgets/line_chart_card.dart';
-import 'package:fitness_dashboard_ui/widgets/summary_widget.dart';
+import 'package:fitness_dashboard_ui/widgets/dashboard/activity_details_widget.dart';
+import 'package:fitness_dashboard_ui/widgets/dashboard/bar_graph_widget.dart';
+import 'package:fitness_dashboard_ui/widgets/dashboard/header_widget.dart';
+import 'package:fitness_dashboard_ui/widgets/dashboard/line_chart_card.dart';
+import 'package:fitness_dashboard_ui/widgets/summary/summary_widget.dart';
 import 'package:flutter/material.dart';
 
 class DashboardWidget extends StatelessWidget {

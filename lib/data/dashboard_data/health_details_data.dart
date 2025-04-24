@@ -1,4 +1,4 @@
-import 'package:fitness_dashboard_ui/model/health_model.dart';
+import 'package:fitness_dashboard_ui/model/dashboard_models/health_model.dart';
 
 class HealthDetails {
   final healthData = const [

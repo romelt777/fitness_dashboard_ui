@@ -1,7 +1,7 @@
 import 'package:fitness_dashboard_ui/const/constant.dart';
-import 'package:fitness_dashboard_ui/widgets/pie_chart_widget.dart';
-import 'package:fitness_dashboard_ui/widgets/scheduled_widget.dart';
-import 'package:fitness_dashboard_ui/widgets/summary_details_widget.dart';
+import 'package:fitness_dashboard_ui/widgets/summary/pie_chart_widget.dart';
+import 'package:fitness_dashboard_ui/widgets/summary/scheduled_widget.dart';
+import 'package:fitness_dashboard_ui/widgets/summary/summary_details_widget.dart';
 import 'package:flutter/material.dart';
 
 class SummaryWidget extends StatelessWidget {

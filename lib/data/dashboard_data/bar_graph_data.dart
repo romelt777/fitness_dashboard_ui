@@ -1,7 +1,7 @@
 import 'dart:ui';
 
-import 'package:fitness_dashboard_ui/model/bar_graph_model.dart';
-import 'package:fitness_dashboard_ui/model/graph_model.dart';
+import 'package:fitness_dashboard_ui/model/dashboard_models/bar_graph_model.dart';
+import 'package:fitness_dashboard_ui/model/dashboard_models/graph_model.dart';
 
 class BarGraphData {
   final data = [

@@ -1,4 +1,4 @@
-import 'package:fitness_dashboard_ui/model/schedule_model.dart';
+import 'package:fitness_dashboard_ui/model/summary_models/schedule_model.dart';
 
 class ScheduleTaskData {
   final schedule = const [

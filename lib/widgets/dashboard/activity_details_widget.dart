@@ -1,4 +1,4 @@
-import 'package:fitness_dashboard_ui/data/health_details_data.dart';
+import 'package:fitness_dashboard_ui/data/dashboard_data/health_details_data.dart';
 import 'package:fitness_dashboard_ui/util/responsive.dart';
 import 'package:fitness_dashboard_ui/widgets/custom_card_widget.dart';
 import 'package:flutter/material.dart';
