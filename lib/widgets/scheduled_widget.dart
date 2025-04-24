@@ -26,30 +26,31 @@ class Scheduled extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            data.schedule[index].title,
-                            style: const TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w500,
+                      Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              data.schedule[index].title,
+                              style: const TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
-                          ),
-                          const SizedBox(height: 2),
-                          Text(
-                            data.schedule[index].date,
-                            style: const TextStyle(
-                              fontSize: 12,
-                              color: Colors.grey,
-                              fontWeight: FontWeight.w500
+                            const SizedBox(height: 2),
+                            Text(
+                              data.schedule[index].date,
+                              style: const TextStyle(
+                                fontSize: 12,
+                                color: Colors.grey,
+                                fontWeight: FontWeight.w500
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                       const Icon(Icons.more),
-            
                     ],
                   ),
                 ],
