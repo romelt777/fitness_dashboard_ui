@@ -12,6 +12,13 @@ class SummaryWidget extends StatelessWidget {
         children: [
           SizedBox(height: 20),
           Chart(),
+          Text(
+            "Summary",
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 16,
+            ),
+          )
         ],
       )
     );
